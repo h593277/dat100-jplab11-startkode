@@ -44,10 +44,10 @@ public class Tekst extends Innlegg {
 
 	}
 	
-	// Metoden nedenfor er kun for valgfri oppgave 6
+	@Override
 	public String toHTML() {
 			
-		throw new UnsupportedOperationException(TODO.method());
+		return "\n" + "<h2>" + getBruker() + getDato() + getLikes() + "<h2>" + "\n" + "<p>" + tekst + "<p>" + "\n" + "<hr>"; 
 				
 	}
 }
