@@ -1,28 +1,20 @@
 package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab11.common.TODO;
-
 public class Bilde extends Tekst {
 
 	private String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		setId(id);
-		setBruker(bruker);
-		setDato(dato);
-		setTekst(tekst);
+		super(id, bruker, dato, tekst);
 		this.url = url;
 	}
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-		setId(id);
-		setBruker(bruker);
-		setDato(dato);
+		super(id, bruker, dato, tekst);
 		for(int i = 0; i < likes; i++)
 		{
 			doLike();
 		}
-		setTekst(tekst);
 		this.url = url;
 	}
 	

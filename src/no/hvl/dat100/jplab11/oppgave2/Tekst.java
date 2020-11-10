@@ -1,6 +1,5 @@
 package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab11.common.TODO;
 import no.hvl.dat100.jplab11.oppgave1.*;
 
 public class Tekst extends Innlegg {
@@ -12,16 +11,12 @@ public class Tekst extends Innlegg {
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-		setId(id);
-		setBruker(bruker);
-		setDato(dato);
+		super(id, bruker, dato);
 		this.tekst = tekst;
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-		setId(id);
-		setBruker(bruker);
-		setDato(dato);
+	super(id, bruker, dato);
 		for(int i = 0; i < likes; i++)
 		{
 			doLike();
